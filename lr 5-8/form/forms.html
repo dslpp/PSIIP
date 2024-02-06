@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="forms.css">
+    </head>
+    <body>
+      <form action="forms.html" method="post">
+        <div class="Zagolovok"><h2>Добавить адрес доставки</h2></div>
+        <div class="form">
+        
+
+        <div class="name1"><label for="name">Имя получателя:</label></div>
+        <div class="pole1"><input type="text" id="name" name="student_name"></div><br>
+        
+        <div class="name2"><label for="mail">Страна/Регион:</label></div>
+            <div class="pole2">
+                <select id="courses" name="student_courses">
+                
+                <option value="computer_engineering">Russian Federation</option>
+                <option value="slectrical_engineering">Belarus</option>
+                <option value="mechanical_engineering">Polsha</option>
+                <option value="civil_engineering">Germany</option>
+             
+            </select></div>
+        
+
+        <div class="name3"><label for="name">Улица, дом, квартира:</label></div>
+        <div class="pole3"><input type="text" id="name" name="student_name"></div>
+
+        <div class="pole33"><input type="text" id="name" name="student_name"></div>
+
+        <div class="name4"><label for="mail">край/Область/Регион:</label></div>
+            <div class="pole4"><select id="courses" name="student_courses">
+                
+                <option value="computer_engineering">Moscow</option>
+                <option value="slectrical_engineering">Sankt-Peterburg</option>
+                <option value="mechanical_engineering">Volgograd</option>
+                <option value="civil_engineering">Ivanovo</option>
+                
+            </select></div>
+        
+
+        <div class="name5"><label for="country">Город:</label></div>
+        <div class="pole5"><input type="text" id="country" name="country"></div>
+
+        <div class="name6"><label for="index">Почтовый индекс:</label></div>
+        <div class="pole6"><input type="text" id="index" name="index"></div>
+
+        <div class="pole66"><input type="checkbox" id="under_16" value="under_16" name="user_age"><label for="under_16" class="light">В моем адресе нет почтового кода</label></div>
+
+        <div class="name7"><label for="password">Мобильный телефон:</label></div>
+        <div class="pole-71"><input type="tel" name="phone1"  maxlength="2" required></div>
+        <div class="pole-72"><input type="tel" name="phone2" pattern="[0-9]{3}" maxlength="3" required></div>
+        <div class="pole-73"><input type="tel" name="phone4" pattern="[0-9]{7}" maxlength="7" required></div>
+        
+        <div class="name8"><label for="password">or</label></div>
+        <div class="pole8"><input type="password" id="password" name="student_password"></div>
+
+        <div class="button-1"><a href="#">Save</a></div>
+        <div class="button-2"><a href="#">Отмена</a></div>
+        </div>
+      </form>
+    </body>
+</html>

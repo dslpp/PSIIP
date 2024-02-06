@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+щ 
+.wrapper {
+    display: grid;    
+    height: 100vh;
+    grid-template-areas: "A A D E"
+                         "B C D E"
+                         "B C D F"
+                         "B C D F"
+                         "B G G G"
+                         "H H H H";
+
+}
+
+
+
+
+
+.three {grid-area: C;}
+.for {grid-area: D;}
+.five {grid-area: E;}
+.six {grid-area: F;}
+.seven {grid-area: G;}
+.eight {grid-area: H;}
+
+
+.one {
+    grid-area: A;
+    background-color: chocolate;
+}
+.two {grid-area: B;
+    background-color: brown;
+}
+.three {
+    background-color: cornflowerblue;
+}
+.for {
+    background-color: darkcyan;
+}
+.five {
+    background-color: darkolivegreen;
+}
+.six {
+    background-color: indianred;
+}
+.seven {
+    background-color: blueviolet;
+}
+.eight {
+    background-color: darkgoldenrod;
+}
+
+@media (min-width: 1366px) {
+    .one {
+        height: 80px;
+        padding: 0 25px;
+    }
+    .two {
+        height: 580px;
+    }
+    .three {
+        height: 530px;
+    }
+    .for {
+        padding: 0 170px;
+    }
+    .five {
+        padding: 0 50px;
+        height: 305px;
+    }
+    .six {
+        height: 305px;
+    }
+    .seven {
+        height: 50px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1366px) {
+    .wrapper {
+        overflow: hidden;
+    }
+    .one {
+        height: 50px;
+    }
+    .two {
+        height: 610px;
+    }
+    .three {
+        height: 560px;
+    }
+    .for {
+        padding: 0 170px;
+    }
+    .five {
+        padding: 0 50px;
+        height: 305px;
+    }
+    .six {
+        height: 305px;
+    }
+    .seven {
+        height: 50px;
+    }
+}
+
+@media (min-width:320px) and (max-width:768px) {
+}
+.one {
+    height: 50px;
+    width: 2fr;
+}
+.two {
+    height: 610px;
+    width: 1fr;
+}
+.three {
+    height: 560px;
+    width: 1fr;
+}
+.for {
+    padding: 0 170px;
+}
+/* .five {
+    display: none;
+}
+.six {
+    display: none;
+} */
+.seven {
+    height: 50px;
+}

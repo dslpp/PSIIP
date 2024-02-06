@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>лр 15 примеры</title>
+    <style>
+        body * {
+          margin: 10px;
+          border: 1px solid blue;
+        }
+      </style>
+      
+</head>
+<body onclick="alert(`сюда всплытие не дойдёт`)">
+    <p>Пример1</p>
+    <input value="Нажми меня" onclick="alert('Клик!')" type="button">
+    <p>Пример2</p>
+    <script>
+function countRabbits() {
+for(let i=1; i<=3; i++) {
+alert("Кролик номер " + i);
+}
+}
+</script>
+<input type="button" onclick="countRabbits()" value="Считать кроликов!">
+<p>Пример3</p>
+
+<input id="elem" type="button" value="Нажми меня!">
+<script>
+  elem.onclick = function() {
+    alert('Спасибо');
+  };
+</script>
+<p>Пример4</p>
+<button onclick="alert(this.innerHTML)">Нажми меня</button>
+<p>Пример5</p>
+<input id="elem1" type="button" value="Нажми меня"/>
+<script>
+  function handler1() {
+    alert('Спасибо!');
+  };
+  function handler2() {
+    alert('Спасибо ещё раз!');
+  }
+  elem1.onclick = () => alert("Привет");
+  elem1.addEventListener("click", handler1); // Спасибо!
+  elem1.addEventListener("click", handler2); // Спасибо ещё раз!
+</script>
+<p>Пример6</p>
+<input id="input" type="button" value="Удалить">
+<script>
+function handler() {
+    alert( 'Спасибо!' );
+  }
+  input.addEventListener("click", handler);
+
+  input.removeEventListener("click", handler);
+</script>
+<p>Пример7</p>
+<form onclick="alert('form')">FORM
+    <div onclick="alert('div')">DIV
+      <p onclick="alert('p')">P</p>
+    </div>
+</form>
+<p>Пример8</p>
+<button onclick="event.stopPropagation()">Кликни меня</button>
+</body>
+</html>

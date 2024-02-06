@@ -1,0 +1,190 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    background-color: #f8f8f9;
+  }
+  
+  form {
+    max-width: 540px;
+    margin:  auto;
+    padding: 6px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e4;
+    font-size: 16px;
+    /* height: auto; */
+    margin: 0;
+    outline: 0;
+    width: 100%;
+    height: 30px;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 16px;
+    transition: all .2s ease;
+  }
+  
+  input::placeholder {
+    color: #999;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    background-color: #fff762;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+  
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+  
+  
+  
+  fieldset {
+    /* margin-bottom: 28px; */
+    border: none;
+  }
+  
+  legend {
+    font-size: 28px;
+    font-weight: 400;
+        /* margin-bottom: 16px; */
+  }
+  
+  
+  
+ 
+
+  .form {
+    padding: 25px;
+    display: grid;
+    grid-template-areas: 
+    "a a a a"
+    "o b b b"
+    "p c c c"
+    "q d d d"
+    ". e e e"
+    "r f f f"
+    "s g g g"
+    "t h h h"
+    ". i i i"
+    "u l m n"
+    ". v k k"
+    "w w z z";
+  }
+  .Zagolovok {grid-area: a;
+background-color: #d7dcdf;}
+  .pole1 {grid-area: b;}
+  .pole2 {grid-area: c;}
+  .pole3 {grid-area: d;}
+  .pole33 {grid-area: e;}
+  .pole4 {grid-area: f;}
+  .pole5 {grid-area: g;}
+  .pole6 {grid-area: h;}
+  .pole66 {grid-area: i;}
+  .pole7 {grid-area: j;}
+  .pole8 {grid-area: k;}
+
+  .pole-71 {grid-area: l;
+width: 45%;}
+  .pole-72 {grid-area: m;
+    margin-left: -40px;
+width: 85%;}
+  .pole-73 {grid-area: n;
+margin-left: -50px;}
+
+  .name1 {grid-area: o;}
+  .name2 {grid-area: p;}
+  .name3 {grid-area: q;}
+  .name4 {grid-area: r;}
+  .name5 {grid-area: s;}
+  .name6 {grid-area: t;}
+  .name7 {grid-area: u;}
+  .name8 {grid-area: v;}
+
+  .button-1 {grid-area: w;}
+  .button-2 {grid-area: z;}
+
+  .button-1 a,
+  .button-2 a {
+    text-decoration: none;
+  }
+  .button-1 {
+    background-color: #ef9324;
+    width: 35%;
+    padding: 3%;
+    text-align: center;
+    border-radius: 2%;
+    border: 1px solid #ce7b15;
+    margin-left: 55%;
+  }
+  .button-1 a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .button-2 {
+    background-color: #dadada;
+    width: 45%;
+    padding: 3%;
+    text-align: center;
+    border-radius: 2%;
+    border: 1px solid rgb(128, 128, 128);
+  }
+  .button-2 a {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  form {
+    background-color: #d7dcdf;
+  }
+  .form {
+    background-color: #FFF;
+  }
+  .name1,
+  .name2,
+  .name3,
+  .name4,
+  .name5,
+  .name6,
+  .name7 {
+    text-align: right;
+    margin-right: 25px;
+  }
+  .pole8 {
+    margin-left: -50px;
+  }
+  .pole66 {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    color: #cbcbcb;
+  }
+  .pole66 label{
+    font-size: 10px;
+  }

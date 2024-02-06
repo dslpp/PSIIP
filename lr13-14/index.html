@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function showTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var timeString = hours + ':' + (minutes < 10 ? '0' + minutes : minutes);
+      alert('Текущее время: ' + timeString);
+    }
+    </script>
+    <script @impotr
+        <script src="js/script.js"></script>
+        
+</head>
+<body>
+   
+    <script>
+       var count = 0;
+    while (count < 33) {
+      document.write("Привет<br>");
+      count++;
+    }
+    </script>
+    <script>
+        var array = [2, -3, 5, -7, 4];
+        var product = 1; 
+        for (var i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+            product *= array[i]; 
+        }
+        }
+
+         document.write("Произведение положительных элементов массива: "+product);
+    </script>
+   
+    <button onclick="showTime()">Показать время</button>
+
+    <h1>Расчет значения по формуле</h1>
+
+    
+    <label for="inputA">Введите значение для a:</label>
+    <input type="number" id="inputA"><br>
+  
+    <label for="inputB">Введите значение для b:</label>
+    <input type="number" id="inputB"><br>
+  
+    <label for="inputC">Введите значение для c:</label>
+    <input type="number" id="inputC"><br>
+   
+    <button onclick="showResult()">Рассчитать</button>
+    <button onclick="show()">Строки!</button>
+
+    
+</body>
+</html>

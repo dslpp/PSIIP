@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка псип</title>
+    <style>
+        div {
+            padding-top: 3%;
+        }
+    </style>
+    <script src="card.js"></script>
+</head>
+<body>
+    <h1>Анкета</h1>
+    <form id="myForm" style="width: 30vw;">
+        <fieldset>
+            <legend>Ввод исходных данных (заголовок рамки)</legend>
+            <div>
+                <label>Имя</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div>
+                <label>Фамилия</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <br>
+            <div>
+                <label>E-mail</label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" required></textarea>
+            </div> 
+            <br>
+            <div align="right">
+                <button type="button" onclick="save()">ОК</button>
+                <button type="reset" onclick="reset">Отмена-Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <h2>Сохраненные значения:</h2>
+    <div id="output"></div>
+</body>
+</html>

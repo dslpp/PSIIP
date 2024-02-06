@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+  
+</head>
+<body>
+    <p id="par1">Абзац 1</p>
+    <p id="par2">Абзац 2</p>
+    <button id="but1">Изменить цвет на зеленый</button>
+    <button id="but2">Изменить цвет на красный</button>
+    <button id="but3">Добавить границу зеленого цвета</button>
+    <button id="but4">Добавить границу красного цвета</button>
+    <script>
+        document.getElementById('but1').addEventListener('click', function () {
+            document.getElementById('par1').style.color = 'green';
+        });
+
+
+        document.getElementById('but2').addEventListener('dblclick', function () {
+            document.getElementById('par2').style.color = 'red';
+        });
+
+        document.getElementById('par1').addEventListener('mouseenter', function () {
+            this.style.color = 'black';
+        });
+
+        document.getElementById('par2').addEventListener('mouseenter', function () {
+            this.style.color = 'black';
+        });
+
+        document.getElementById('but3').addEventListener('click', function () {
+            document.getElementById('par1').style.border = '1px solid green';
+            document.getElementById('par2').style.border = '1px solid green';
+        });
+
+        document.getElementById('but4').addEventListener('dblclick', function () {
+            document.getElementById('par1').style.border = '1px solid red';
+            document.getElementById('par2').style.border = '1px solid red';
+        });
+        window.addEventListener('load', function () {
+            alert('Добро пожаловать в задание 1');
+        });
+
+        window.addEventListener('beforeunload', function () {
+            alert('Вы покидаете задание 1');
+        });
+    </script>
+   
+</body>
+</html>

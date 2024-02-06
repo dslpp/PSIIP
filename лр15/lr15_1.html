@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>лаба 15 часть 2</title>
+    <script type='text/javascript'>
+        function dispMes(event)
+        {
+        document.getElementById('par').style.display='block';
+        document.getElementById('resultx').innerHTML=event.clientX;
+        document.getElementById('resulty').innerHTML=event.clientY;
+        }
+        function start(){
+        document.getElementById('par1').style.color='red';
+        }
+        function stop(){
+        document.getElementById('par1').style.color='black';
+        }
+        function timeMsg()
+        {
+        var t=setTimeout("alertMsg()",3000);
+        }
+        function alertMsg()
+        {
+        alert("Привет");
+        }
+        var c=0;
+        var t;
+        var timer_is_on=0;
+
+        function timedCount()
+        {
+        document.getElementById('txt').value=c;
+        c=c+1;
+        t=setTimeout("timedCount()",1000);
+        }
+
+        function doTimer()
+        {
+        if (!timer_is_on)
+        {
+        timer_is_on=1;
+        timedCount();
+        }
+        
+        }
+        function clearTimeout1(){
+            clearTimeout(t);
+        }
+      
+
+        </script>
+        <style type='text/css'>
+            #block {
+                height: 360px;
+                width: auto;
+                border: 2px dotted #f00;
+            }
+            p {
+                text-indent: 40px;
+                padding-left: 20px;
+            }
+            #par1
+            {
+            color:black;
+            cursor:pointer;
+            }
+            
+
+            </style>
+            
+</head>
+<body  onload="startTime()">
+    <p>Пример1</p>
+    <script type='text/javascript'>
+        function go(){
+           document.location.assign('lr15.html');
+        }
+        </script>
+        </head>
+        <body>
+        <input type='button' value='Перейти на главную страницу нашего сайта' onclick='go()'/>
+        <p>Пример2</p>
+        <div id='block'><p>Щелкните в любом месте правого окна редактора.</p>
+            <p id='par' style='display:none;' >Щелчок мыши был произведен по координатам: 
+            <b><span id='resultx'> </span></b> пикс. по горизонтали от левой границы окна и <br />
+            <b><span id='resulty'> </span></b> пикс. по вертикали от верхней границы окна.</p>
+            </div>
+        <p>Пример3</p>
+        <p id='par1' onmouseover='start()' onmouseout='stop()'>Наведите на меня курсор мыши.</p>
+        <p>Пример4</p>
+        <form>
+            <input type="button" value="Показать сигнальное окно через 3 секунды" onClick="timeMsg()" />
+            </form>
+        <p>Пример5-6</p>
+            <form>
+                <input type="button" value="Начать отсчет!" onClick="doTimer()">
+                <input type="button" value="ПРЕКРАТИ НЕЕЕЕЕТ" onClick="clearTimeout1()">
+                <input type="text" id="txt">
+                </form>
+                <p>Щелкните на кнопке выше. Поле ввода начнет отсчет до бесконечности, начиная с 0.</p>
+
+                
+
+        
+</body>
+</html>

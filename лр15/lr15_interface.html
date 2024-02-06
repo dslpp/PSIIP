@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Примеры интерфейсных событий</title>
+    <style>
+        .image-container {
+            margin-top: 10%;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            position: relative;
+        }
+
+        .draggable-image {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            cursor: pointer;
+        }
+        #myElement{
+            width: 20%; 
+            height: 100%;
+             background-color: lightblue;
+        }
+        #dragImage{
+            width:150px ;
+            height:150px;
+        }
+        #pointerElement{
+            width: 200px;
+             height: 200px;
+              background-color: lightcoral;
+               text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="myElement">Кликните меня</div>
+    <p></p>
+    <input type="text" id="inputElement" placeholder="Нажмите Enter">
+    <p></p>
+    <img class="draggable-image" id="dragImage" src="pngegg.png" draggable="true">
+    <p></p>
+    <div class="image-container" id="dropTarget">
+        <img src="empty-box-top-view_1101-93.avif" width="300px" height="300px" alt="Контейнер">
+    </div>
+    <p></p>
+    <div id="pointerElement" >Указатель</div>
+
+
+    <script>
+        // События мыши
+        document.getElementById('myElement').addEventListener('click', function() {
+            alert('Вы кликнули на элемент');
+        });
+
+        document.getElementById('myElement').addEventListener('mouseenter', function() {
+            this.style.backgroundColor = 'yellow';
+        });
+
+        document.getElementById('myElement').addEventListener('mousedown', function(event) {
+            if (event.button === 0) {
+                alert('Левая кнопка мыши была нажата');
+            }
+        });
+
+        // События клавиатуры
+        document.getElementById('inputElement').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                alert('Вы нажали клавишу Enter');
+            }
+        });
+
+    
+      
+        const dragImage = document.getElementById('dragImage');
+        const dropTarget = document.getElementById('dropTarget');
+        
+        dragImage.addEventListener('dragstart', function(event) {
+            event.dataTransfer.setData('text/plain', 'draggable');
+        });
+        
+        dropTarget.addEventListener('dragover', function(event) {
+            event.preventDefault();
+        });
+        
+        dropTarget.addEventListener('drop', function(event) {
+            event.preventDefault();
+            
+            const data = event.dataTransfer.getData('text/plain');
+            
+            if (data === 'draggable') {
+                // Получаем координаты перетаскиваемой картинки
+                const x = event.clientX - dropTarget.getBoundingClientRect().left;
+                const y = event.clientY - dropTarget.getBoundingClientRect().top;
+                
+                // Создаем новую картинку в контейнере
+                const newImage = document.createElement('img');
+                newImage.src = 'pngegg.png';
+                newImage.width = 150;
+                newImage.height = 150;
+                newImage.style.position = 'absolute';
+                newImage.style.left = x - 75 + 'px'; // 75 - половина ширины картинки
+                newImage.style.top = y - 75 + 'px'; // 75 - половина высоты картинки
+                
+                // Добавляем новую картинку в контейнер
+                dropTarget.appendChild(newImage);
+            }
+        });
+    
+        document.getElementById('pointerElement').addEventListener('pointerdown', function(event) {
+            console.log('Указатель был нажат');
+        });
+
+        document.getElementById('pointerElement').addEventListener('pointermove', function(event) {
+            console.log('Указатель движется');
+        });
+
+ 
+        window.addEventListener('scroll', function() {
+            console.log('Произошла прокрутка страницы');
+        });
+        document.addEventListener('touchstart', function(event) {
+    console.log('Произошло касание сенсорного экрана');
+    });
+    </script>
+</body>
+</html>

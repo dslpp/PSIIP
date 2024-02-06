@@ -1,0 +1,16 @@
+{
+  "name": "mega",
+  "version": "1.0.0",
+  "description": "Карточка по ноде хочу 10 баллов и освобождение от экзамена ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Дашулька",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
